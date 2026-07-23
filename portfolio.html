@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <title> My Portfolio </title>
+
+        <style>
+            /* General Style */
+            *{
+                margin : 0;
+                padding : 0;
+                box-sizing : border-box;
+                scroll-behavior : smooth;
+            }
+
+            body{
+                font-family : 'Times New Roman', Times, serif;
+                background-color: whitesmoke;
+                color : darkslategray;
+            }
+
+            /* Navigation Bar */
+            nav{
+                background-color : black;
+                padding : 20px;
+                text-align : center;
+                position : sticky;
+                top : 0;
+                z-index : 1000;
+            }
+
+            nav h2{
+                color : white;
+                margin-bottom : 15px; 
+            }
+
+            nav a {
+                color : white;
+                text-decoration : none;
+                margin : 0 15px;
+                font-weight : bold;
+                transition : 0.3s;
+            }
+
+            nav a:hover{
+                color : gold;
+            }
+
+            /* Home Section */
+            .home{
+                min-height : 90vh;
+                display : flex;
+                flex-direction : column;
+                justify-content : center;
+                align-items : center;
+                text-align : center;
+                padding : 50px 20px;
+                background-color : lightblue;
+                color : white;
+            }
+
+            .home h1{
+                font-size : 55px;
+                color : midnightblue;
+                margin-bottom : 20px;
+            }
+
+            .home p{
+                font-size : 22px;
+                color : darkslategray;
+                margin-bottom : 30px;
+            }
+
+            /* Home Button */
+            .home-button{
+                display : inline-block;
+                background-color : midnightblue;
+                color : white;
+                padding : 15px;
+                border-radius : 30px;
+                text-decoration : none;
+                font-weight : bold;
+                transition : 0.3s;
+            }
+
+            .home-button:hover{
+                background-color: darkblue;
+                transform : scale(1.05);
+            }
+
+            /* Section Style */
+            section{
+                padding : 80px 20px;
+                text-align : center;
+            }
+
+            section h2{
+                font-size : 35px;
+                margin-bottom : 30px;
+                color : midnightblue;
+            }
+
+            /* About Section */
+            #about{
+                background-color : lavender;
+            }
+
+            .about{
+                max-width : 750px;
+                margin : auto;
+                background-color : white;
+                padding : 30px;
+                border-radius : 15px;
+                box-shadow : 0 5px 15px lightgray;
+                line-height : 1.8;
+            }
+
+            /* Skills Section */
+            #skills{
+                background-color : honeydew;
+            }
+
+            .skills{
+                display : flex;
+                justify-content : center;
+                gap : 25px;
+                flex-wrap : wrap;
+            }
+
+            .skill{
+                background-color : white;
+                width : 180px;
+                padding : 30px 20px;
+                border-radius : 15px;
+                box-shadow : 0 5px 15px lightgray;
+                font-size : 20px;
+                font-weight : bold;
+                color : darkgreen;
+                transition : 0.3s;
+            }
+            
+            .skill:hover{
+                transform : translateY(-10px);
+                background-color : lightgreen;
+                color : darkgreen;
+            }
+
+            /* Projects */
+            #projects{
+                background-color : mistyrose;
+            }
+
+            .projects{
+                display : flex;
+                justify-content : center;
+                gap : 30px;
+                flex-wrap : wrap;
+            }
+
+            .project{
+                background-color : white;
+                width : 280px;
+                padding : 30px;
+                border-radius: 15px;
+                box-shadow : 0 5px 15px lightgray;
+                transition : 0.3s;
+            }
+
+            .project:hover{
+                transform : translateY(-10px);
+                box-shadow : 0 10px 20px gray;
+            }
+
+            .project h3{
+                color : crimson;
+                margin-bottom : 15px;
+                font-size : 22px;
+            }
+
+            .project p{
+                line-height : 1.6;
+            }
+
+            .project-button{
+                display : inline-block;
+                margin-top : 20px;
+                padding : 10px 20px;
+                background-color : crimson;
+                color : white;
+                text-decoration : none;
+                border-radius : 20px;
+                transition : 0.3s;
+            }
+
+            .project-button:hover{
+                background-color : darkred;
+            }
+
+            /* Contact Section */
+            #contact{
+                background-color : aliceblue;
+            }
+
+            .contact-box{
+                max-width : 600px;
+                margin : auto;
+                background-color : white;
+                padding : 30px;
+                border-radius : 15px;
+                box-shadow : 0 5px 15px lightgray;
+            }
+
+            .contact-box p{
+                margin : 15px;
+                font-size : 18px;
+            }
+
+            .contact{
+                background-color : black;
+                color : white;
+            }
+
+            .contact h2{
+                color :  white;
+            }
+
+            /* Footer Section */
+            .footer{
+                background-color : midnightblue;
+                color : white;
+                text-align : center;
+                padding : 25px;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        <!-- Navigation -->
+         <nav>
+            <h2> My Portfolio </h2>
+            <a href = "#home"> Home </a>
+            <a href = "#about"> About </a>
+            <a href = "#skills"> Skills </a>
+            <a href = "#projects"> Projects </a>
+            <a href = "#contact"> Contact </a>
+         </nav>
+
+         <!-- Home Section -->
+          <section class = "home" id = "home">
+            <h1> Hello, I'm Rupali </h1>
+            <p> Web Developer | Full Stack | Student </p>
+            <a href = "#projects" class = "home-button">
+                View My Work
+            </a>
+          </section>
+
+          <!-- About Section -->
+           <section id = "about">
+            <h2> About Me </h2>
+
+            <div class = "about">
+                <p> 
+                    I am a passionate web developer who enjoys creating beautiful and user-friendly websites.
+                    I am currently learning HTML, CSS and JavaScripts to improve my web development skills.
+                </p>
+            </div>
+           </section>
+
+           <!-- Skills Section -->
+            <section id = "skills">
+                <h2> My Skills </h2>
+
+                <div class = "skills">
+                    <div class = "skill"> HTML </div>
+                    <div class = "skill"> CSS </div>
+                    <div class = "skill"> JavaScript </div>
+                    <div class = "skill"> Python </div>
+                    <div class = "skill"> C++ </div>
+                </div>
+            </section>
+
+            <!-- Project Section -->
+             <section id = "projects">
+                <h2> My Projects </h2>
+
+                <div class = "projects">
+                    <div class = "project"> 
+                        <h3> Portfolio Website </h3>
+                        <p>
+                            A personal portfolio website created using HTML and CSS.
+                        </p>
+                        <a href = "#" class = "project-button">
+                            View Project
+                        </a>
+                    </div>
+
+                    <div class = "project">
+                        <h3> Login Form </h3>
+                        <p>
+                            A simple and attractive login form using HTML and CSS.
+                        </p>
+                        <a href = "#" class = "project-button">
+                            View Project
+                        </a>
+                    </div>
+
+                    <div class = "project">
+                        <h3> Calculator </h3>
+                        <p>
+                            A basic calculator project created using Python.
+                        </p>
+                        <a href = "#" class = "project-button">
+                            View Project
+                        </a>
+                    </div>
+
+                    <div class = "project">
+                        <h3> Tic Tac Toe </h3>
+                        <p>
+                            A basic tic tac toe project created using c language.
+                        </p>
+                        <a href = "#" class = "project-button">
+                            View Project
+                        </a>
+                    </div>
+
+                </div>
+             </section>
+
+             <!-- Contact Section -->
+              <section class = "contact" id = "cantact">
+                <h2> Contact Me </h2>
+                <p> 📧 Email : rupali143521@gmail.com </p>
+                <p> 📱 Phone No. : 7986443834 </p>
+                <p> 📍 Location : India </p>
+              </section>
+
+              <!-- Footer -->
+               <Footer>
+                    <p>© 2026 Rupali's Portfolio. All Rights Reserved. </p>
+               </Footer>
+    
+    </body>
+</html>
